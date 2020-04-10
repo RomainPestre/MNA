@@ -1,4 +1,4 @@
-# MNA - Mini Nutritional Assessment for finnish autorities
+# MNA - Mini Nutritional Assessment
 ## Link
 <i>Website link : https://romainpestre-mna-1.glitch.me/</i>
 ## Use
