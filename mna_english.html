@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>MNA - Mini Nutritional Assessment</title>
+		<meta charset= 'utf-8'>
+		<link rel="stylesheet" href="style-mna.css">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+		<script type="text/javascript">
+			function calcul(){
+				var x = 0;
+
+				if (document.getElementById("a1").checked == true){x+=1;}
+				if (document.getElementById("a2").checked == true){x+=2;}
+				if (document.getElementById("b1").checked == true){x+=1;}
+				if (document.getElementById("b2").checked == true){x+=2;}
+				if (document.getElementById("b3").checked == true){x+=3;}
+				if (document.getElementById("c1").checked == true){x+=1;}
+				if (document.getElementById("c2").checked == true){x+=2;}
+				if (document.getElementById("d1").checked == true){x+=1;}
+				if (document.getElementById("e1").checked == true){x+=1;}
+				if (document.getElementById("e2").checked == true){x+=2;}
+				if (document.getElementById("f1").checked == true){x+=1;}
+				if (document.getElementById("f2").checked == true){x+=2;}
+				if (document.getElementById("f3").checked == true){x+=3;}		
+				if (document.getElementById("g0").checked == true){x+=1;}
+				document.getElementById("score1").innerHTML = x;
+
+				if (document.getElementById("h1").checked == true){x+=1;}	
+				if (document.getElementById("i1").checked == true){x+=1;}
+				if (document.getElementById("j1").checked == true){x+=1;}
+				if (document.getElementById("j2").checked == true){x+=2;}	
+				if (document.getElementById("k0").checked == true 
+					&& document.getElementById("k2").checked == true 
+					&& document.getElementById("k4").checked == true)
+					{x+=1;}
+				else if (document.getElementById("k0").checked == false 
+					&& document.getElementById("k2").checked == true 
+					&& document.getElementById("k4").checked == true 
+					|| document.getElementById("k0").checked == true 
+					&& document.getElementById("k2").checked == false 
+					&& document.getElementById("k4").checked == true 
+					|| document.getElementById("k0").checked == true 
+					&& document.getElementById("k2").checked == true 
+					&& document.getElementById("k4").checked == false)
+					{x+=0.5}
+
+				if (document.getElementById("l1").checked == true){x+=1;}		
+				if (document.getElementById("m1").checked == true){x+=0.5;}
+				if (document.getElementById("m2").checked == true){x+=1;}	
+				if (document.getElementById("n1").checked == true){x+=1;}
+				if (document.getElementById("n2").checked == true){x+=2;}		
+				if (document.getElementById("o1").checked == true){x+=1;}
+				if (document.getElementById("o2").checked == true){x+=2;}		
+				if (document.getElementById("p1").checked == true){x+=0.5;}
+				if (document.getElementById("p2").checked == true){x+=1;}
+				if (document.getElementById("p3").checked == true){x+=2;}	
+				if (document.getElementById("q1").checked == true){x+=0.5;}
+				if (document.getElementById("q2").checked == true){x+=1;}	
+				if (document.getElementById("r1").checked == true){x+=1;}
+
+				document.getElementById("score2").innerHTML = x;
+			}
+
+			function validateForm() {
+				var x = document.forms["myForm"]["surname"].value;
+				if (x == "") {
+					alert("Name must be filled out");
+					return false;
+				}
+			}
+
+			function bmiscore() {
+				var height = Number(document.getElementById("height").value);
+				var weight = Number(document.getElementById("weight").value);
+				var float = weight / (height * height) * 10000;
+				var result = Math.round(float);
+				document.getElementById("result").innerHTML = "Your Body Mass Index (BMI) is: " + result;
+			}		
+		</script>
+
+	</head>
+	<body><form name="myForm" action="file:///C:/action_page.php" onsubmit="return validateForm()" method="post">
+
+	<h1>MNA - MINI NUTRITIONAL ASSESSMENT</h1>
+
+	<fieldset class="section" id="informations">
+		<legend>Personal informations</legend>
+		<label for="name">First name:</label>
+		<input type="text" id="name" name="name" autocomplete="on" placeholder="Ex: John" required="required">
+		
+		<label for="surname ">Last name:</label>
+		<input type="text" id="surname" name="surname" autofocus="autofocus" placeholder="Ex: Harington" required="required">
+		
+		<label for="sex">Sex:</label>
+		<input list="browsers" name="browser" autocomplete="on" required="required ">
+		<datalist id="browsers">
+			<option value="Male">
+			<option value="Female">
+		</datalist><br>
+		
+		<label for="age">Age:</label>
+		<input type="number" id="age" name="age" autocomplete="on" required="required">
+		
+		<label for="weight">Weight (kg):</label>
+		<input type="number" id="weight" name="weight" autocomplete="on" required="required">
+		
+		<label for="height">Height (cm):</label>
+		<input type="number" id="height" name="height" autocomplete="on" required="required">
+		
+		<label for="date">Date:</label>
+		<input type="date" id="date" name="date" autocomplete="on" required="required">
+		<br>
+		<input type="button" value="Calculate your BMI" onclick="bmiscore()" id="bmi"/>
+		<br>
+		<p id="result">Your Body Mass Index (BMI) is: ...</p>
+		<input type="reset" value="Reset" id="resetinfo">
+		<input type="submit" value="Submit" id="submitinfo">
+
+	</fieldset>
+
+	<fieldset class="section">
+		<legend>Screening</legend>
+		<div>
+			<h4>A. Has food intake declined over the past 3 months due to loss of appetite, digestive problems, chewing or swallowing difficulties ?</h4>
+			<input type="radio" id="a0" name="A" value="0">
+			<label for="a0">severe decrease in food intake</label><br>
+			<input type="radio" id="a1" name="A" value="1">
+			<label for="a1">moderate decrease in food intake</label><br>
+			<input type="radio" id="a2" name="A" value="2">
+			<label for="a2">no decrease in food intake</label><br>
+		</div><br>  
+
+		<div>
+			<h4>B. Weight loss during the last 3 months</h4>
+			<input type="radio" id="b0" name="B" value="0">
+			<label for="b0">weight loss greater than 3kg (6.6lbs)</label><br>
+			<input type="radio" id="b1" name="B" value="1">
+			<label for="b1">does not know</label><br>
+			<input type="radio" id="b2" name="B" value="2">
+			<label for="b2">weight loss between 1 and 3kg (2.2 and 6.6lbs)</label><br>
+			<input type="radio" id="b3" name="B" value="3">
+			<label for="b3">no weight loss</label><br>
+		</div><br>  
+		
+		<div>
+			<h4>C. Mobility</h4>
+			<input type="radio" id="c0" name="C" value="0">
+			<label for="c0">bed or chair bound</label><br>
+			<input type="radio" id="c1" name="C" value="1">
+			<label for="c1">able to get out of bed / chair but does not go out</label><br>
+			<input type="radio" id="c2" name="C" value="2">
+			<label for="c2">goes out</label><br>
+		</div><br>  
+		
+		<div>
+			<h4>D. Has suffered psychological stress or acute disease in the past 3 months ?</h4>
+			<input type="radio" id="d0" name="D" value="0">
+			<label for="d0">Yes</label><br>
+			<input type="radio" id="d1" name="D" value="1">
+			<label for="d1">No</label><br>
+		</div><br>  
+		
+		<div>
+			<h4>E. Neuropsychological problems </h4>
+			<input type="radio" id="e0" name="E" value="0">
+			<label for="e0">severe dementia or depression</label><br>
+			<input type="radio" id="e1" name="E" value="1">
+			<label for="e1">mild dementia</label><br>
+			<input type="radio" id="e2" name="E" value="2">
+			<label for="e2">no psychological problems</label><br>
+		</div><br>  
+
+
+		<div>
+			<h4>F. Body Mass Index (BMI)= weight in kg/(height in m)²</h4>
+			<input type="radio" id="f0" name="F" value="0">
+			<label for="f0">BMI less than 19</label><br>
+			<input type="radio" id="f1" name="F" value="1">
+			<label for="f1">BMI 19 to less than 21</label><br>
+			<input type="radio" id="f2" name="F" value="2">
+			<label for="f2">BMI 21 to less than 23</label><br>
+			<input type="radio" id="f3" name="F" value="3">
+			<label for="f3">BMI 23 or greater</label><br>
+		</div><br>  
+		<br><br>
+
+		<button onclick="calcul()">Malnutrition Indicator Score</button>
+		<p id="score1"></p>
+	</fieldset>
+
+	<fieldset class="section">
+		<legend>Assessment</legend>
+
+		<div>
+			<h4>G. Lives indepently(not in nursing home or hospital)</h4>
+			<input type="radio" id="g0" name="G" value="0">
+			<label for="g0">Yes</label><br>
+			<input type="radio" id="g1" name="G" value="1">
+			<label for="g1">No</label><br>
+		</div><br>  
+
+		<div>
+			<h4>H. Takes more than 3 prescription</h4>
+			<input type="radio" id="h0" name="H" value="0">
+			<label for="h0">Yes</label><br>
+			<input type="radio" id="h1" name="H" value="1">
+			<label for="h1">No</label><br>
+		</div><br>  
+
+		<div>
+			<h4>I. Pressure sores or skin ulcers</h4>
+			<input type="radio" id="i0" name="I" value="0">
+			<label for="i0">Yes</label><br>
+			<input type="radio" id="i1" name="I" value="1">
+			<label for="i1">No</label><br>
+		</div><br>  
+
+		<div>
+			<h4> J. How many full meals does the patient eat daily ?</h4>
+			<input type="radio" id="j0" name="j" value="0">
+			<label for="j0">1 meal</label><br>
+			<input type="radio" id="j1" name="j" value="1">
+			<label for="j1">2 meal</label><br>
+			<input type="radio" id="j2" name="j" value="2">
+			<label for="j2">3 meal</label><br>
+		</div><br>  
+
+		<div>
+			<h4>K. Selected consumption markers for protein intake</h4>
+			<div>
+				<p>At least one serving of dairy products(milk, cheese, yoghurt) per day</p>
+				<input type="radio" name="k0" id="k0" value="Yes"> 
+				<label for="k0">Yes</label>
+				<input type="radio" name="k0" id="k1" checked="" value="No"> 
+				<label for="k1">No</label>
+			</div><br>
+
+			<div>
+				<p>Two or more serving of legumes or eggs per week</p>
+				<input type="radio" name="k2" id="k2" value="Yes"> 
+				<label for="k2">Yes</label>
+				<input type="radio" name="k2" id="k3" checked="" value="No"> 
+				<label for="k3">No</label>
+			</div><br>
+
+			<div>
+				<p>Meat,fish or poultry every day</p>
+				<input type="radio" name="k4" id="k4" value="Yes"> 
+				<label for="k2">Yes</label>
+				<input type="radio" name="k4" id="k5" checked="" value="No"> 
+				<label for="k3">No</label>
+			</div><br>
+		</div><br>
+
+		<div>
+			<h4>L. Consumes two or more servings of fruit or vegetables</h4>
+			<input type="radio" id="l0" name="L" value="0">
+			<label for="l0">Yes</label><br>
+			<input type="radio" id="l1" name="L" value="1">
+			<label for="l1">No</label><br>
+		</div><br>  
+
+		<div>
+			<h4>M. How much fluid(water,juice,coffee,tea,milk...)</h4>
+			<input type="radio" id="m0" name="M" value="0">
+			<label for="m0">Less than 3 cups</label><br>
+			<input type="radio" id="m1" name="M" value="0.5">
+			<label for="m1">3 to 5 cups</label><br>
+			<input type="radio" id="m2" name="M" value="1">
+			<label for="m2">more than 5 cups</label><br>
+		</div><br>  
+
+		<div>
+			<h4>N. Mode of feeling </h4>
+			<input type="radio" id="n0" name="N" value="0">
+			<label for="n0">unable to eat without assistance</label><br>
+			<input type="radio" id="n1" name="N" value="1">
+			<label for="n1">self-feld with some difficulty</label><br>
+			<input type="radio" id="n2" name="N" value="2">
+			<label for="n2">self-feld without any problem</label><br>
+		</div><br>  
+
+		<div>
+			<h4>O. Self view of nutritional status </h4>
+			<input type="radio" id="o0" name="O" value="0">
+			<label for="o0">views self as being malnourished</label><br>
+			<input type="radio" id="o1" name="O" value="1">
+			<label for="o1">is uncertain of nutritional state</label><br>
+			<input type="radio" id="o2" name="O" value="2">
+			<label for="o2">views self as having no nutritional problem</label><br>
+		</div><br>  
+
+		<div>
+			<h4>P. In comparison with other people of the same age, how does the patient consider his/her health status</h4>
+			<input type="radio" id="p0" name="P" value="0">
+			<label for="p0">not as good</label><br>
+			<input type="radio" id="p1" name="P" value="0.5">
+			<label for="p1">does not know</label><br>
+			<input type="radio" id="p2" name="P" value="1">
+			<label for="p2">as good</label><br>
+			<input type="radio" id="p3" name="P" value="2">
+			<label for="p3">better</label><br>
+		</div><br>  
+
+		<div>
+			<h4>Q. Mid-arm circumference (MAC) in cm</h4>
+			<input type="radio" id="q0" name="Q" value="0">
+			<label for="q0">MAC less than 21</label><br>
+			<input type="radio" id="q1" name="Q" value="0.5">
+			<label for="q1">MAC 21 to 22</label><br>
+			<input type="radio" id="q2" name="Q" value="1">
+			<label for="q2">MAC greater than 22</label><br>
+		</div><br>  
+
+		<div>
+			<h4>R. Calf circumference (CC) in cm</h4>
+			<input type="radio" id="r0" name="R" value="0">
+			<label for="r0">CC less than 21</label><br>
+			<input type="radio" id="r1" name="R" value="1">
+			<label for="r1">CC 31 or greater</label><br>
+		</div><br>  
+	</fieldset>
+
+	<button id="score" onclick="calcul()">Malnutrition Indicator Score</button>
+	<p id="score2"></p>
+			
+	<p>More information about MNA can be found at: <a href="https://www.mna-elderly.com/" target="_blank" style="color:#053EED;"> www.mna-elderly.com.</a></p>
+</html>

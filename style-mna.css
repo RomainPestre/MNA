@@ -1,0 +1,120 @@
+body {
+	font-size: 14px;
+	font-family: Arial;
+	color: #333;
+}
+
+h1 {	
+    font-family: Impact, fantasy;
+	font-size: 34px;
+	font-weight: normal;
+	color:#000080
+}
+
+legend {
+	background-color: #000080;
+	box-shadow: 0px 0px 3px #04007C;
+	color: rgba(255,255,255,255);
+	border: 2px solid #000080;
+    border-radius: 6px;
+	border-width: 5px 100px;
+	padding : 3px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 18px;	
+}
+
+h4 {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+button {
+	cursor:pointer;
+	font-size: 14px;
+}
+
+input[type="button"] {
+	cursor:pointer;
+}
+
+.class {
+	font-weight: bold;
+}
+
+.section {
+	background-color: #C9DCEF;
+	padding: 10px;
+	margin: 20px 0px;
+	font-size: 16px;
+	border-radius: 6px;
+}
+
+.section:hover {
+	box-shadow: 0px 0px 5px #85929E ;
+}
+
+.section#informations input:not(#submitinfo #resetinfo #bmi) {
+	width: 300px;
+	height: 20px;
+}
+
+.section#informations label {
+	display: inline-block;
+	width: 200px;
+	padding: 10px 0px 10px 40px;
+}
+
+#submitinfo {
+	float: right;
+	padding: 12px 12px;
+	font-size: 14px;
+	color: #fff;
+	background-color: #00AF00;
+	font-weight: bold;
+	text-transform: uppercase; 
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#submitinfo:hover {
+	box-shadow: 0px 0px 4px #555;
+	background-color: #007D00 
+}
+
+#resetinfo {
+	padding: 12px;
+	font-size: 14px;
+	color: 	#fff;
+	background-color: #A9A9A9;
+	font-weight: bold;
+	text-transform: uppercase; 
+	border-radius: 5px;
+	cursor:pointer;
+}
+
+#resetinfo:hover {
+	box-shadow: 0px 0px 4px #555;
+	background-color: #707B7C
+}
+
+#bmi {
+	padding: 4px;
+	font-size: 14px;
+	color: 	#fff;
+	background-color: #66D866;
+	border-radius: 5px;
+	cursor:pointer;
+	float: left;
+}
+
+#score {
+	padding: 12px 12px;
+	font-size: 14px;
+	color: #fff;
+	background-color: #00AF00;
+	font-weight: bold;
+	text-transform: uppercase; 
+	border-radius: 5px;
+	cursor: pointer;
+}
