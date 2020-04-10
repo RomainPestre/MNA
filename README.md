@@ -1,6 +1,6 @@
 # MNA - Mini Nutritional Assessment
 ## Link
-<i>Website link : https://romainpestre-mna-1.glitch.me/</i>
+<i>Website link : https://romainpestre-mna.glitch.me</i>
 ## Use
 1. Select Language
 2. Fill in the personal information
