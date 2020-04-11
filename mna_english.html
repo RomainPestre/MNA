@@ -26,6 +26,17 @@
 				if (document.getElementById("g0").checked == true){x+=1;}
 				document.getElementById("score1").innerHTML = x;
 
+				if (x<=7) {
+					document.getElementById("comment1").innerHTML = "Malourished";
+				}
+				if (x>=8 && x<=11) {
+					document.getElementById("comment1").innerHTML = "At risk of malnutrition";
+				}
+				if (x>=12 && x<=14) {
+					document.getElementById("comment1").innerHTML = "Normal nutritional status";
+				}
+
+
 				if (document.getElementById("h1").checked == true){x+=1;}	
 				if (document.getElementById("i1").checked == true){x+=1;}
 				if (document.getElementById("j1").checked == true){x+=1;}
@@ -60,6 +71,16 @@
 				if (document.getElementById("r1").checked == true){x+=1;}
 
 				document.getElementById("score2").innerHTML = x;
+				if (x<17) {
+					document.getElementById("comment2").innerHTML = "Malourished";
+				}
+				if (x>=17 && x<=23.5) {
+					document.getElementById("comment2").innerHTML = "At risk of malnutrition";
+				}
+				if (x>=24 && x<=30) {
+					document.getElementById("comment2").innerHTML = "Normal nutritional status";
+				}
+		
 			}
 
 			function validateForm() {
@@ -187,6 +208,7 @@
 
 		<button onclick="calcul()">Malnutrition Indicator Score</button>
 		<p id="score1"></p>
+		<p id="comment1"></p>
 	</fieldset>
 
 	<fieldset class="section">
@@ -324,6 +346,7 @@
 
 	<button id="score" onclick="calcul()">Malnutrition Indicator Score</button>
 	<p id="score2"></p>
+	<p id="comment2"></p>
 			
 	<p>More information about MNA can be found at: <a href="https://www.mna-elderly.com/" target="_blank" style="color:#053EED;"> www.mna-elderly.com.</a></p>
 </html>
