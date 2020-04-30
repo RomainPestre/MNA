@@ -118,3 +118,13 @@ input[type="button"] {
 	border-radius: 5px;
 	cursor: pointer;
 }
+
+#nni {
+	text-align: right;
+	height: 300px;
+}
+
+.nni {
+	text-align: right;
+	height: 100px;
+}
