@@ -111,6 +111,11 @@
 
 		<h1>MNA - MINI NUTRITIONAL ASSESSMENT</h1>
 
+		<div class="section" id="helpsec">
+			<button onclick="window.open('help_finnish.html');" id="help" class="float-left submit-button" id="help">Auta</button>
+			<p>Jos sinulla on vaikeuksia tämän lomakkeen täyttämisessä, älä epäröi kysyä apuamme napsauttamalla tätä painiketta.</p>
+		</div>
+
 		<form name="myForm" action="file:///C:/action_page.php" onsubmit="return validateForm()" method="post">
 			<fieldset class="section" id="informations">
 				<legend>Henkilökohtaisia ​​Tietoja</legend>
@@ -144,7 +149,6 @@
 				<p id="result">Kehon massaindeksi (BMI) on: ...</p>
 				<input type="reset" value="tyhjennä" id="resetinfo">
 				<input type="submit" value="Lähetä" id="submitinfo">
-				
 			</fieldset>
 
 			<fieldset class="section">
@@ -359,5 +363,6 @@
 	</body>
 	<footer>
 		<p>&copy; Société des Produits Nestlé SA Trademark Owners</p>
+		<p>&copy; Société des Produits Nestlé SA 1994, Revision 2009</p>
 	</footer>
 </html>

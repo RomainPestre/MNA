@@ -65,6 +65,21 @@ input[type="button"] {
 	padding: 10px 0px 10px 40px;
 }
 
+#help {
+	padding: 12px 12px;
+	font-size: 14px;
+	color: #fff;
+	background-color: #00AF00;
+	font-weight: bold;
+	text-transform: uppercase; 
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#helpsec {
+	background-color: #FFD141;
+}
+
 #submitinfo {
 	float: right;
 	padding: 12px 12px;
