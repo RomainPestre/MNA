@@ -23,6 +23,18 @@
 1. Click on the download link
 2. Save the folder in the desired location on the device.
 3. Unzip the folder
-4. All you have to do is launch the DEM by opening "index.html".
+4. All you have to do is launch the MNA by opening "index.html".
 ### Computer
+Click on the download link
+<img src="resources/pictures/tutopc1.PNG" alt="Click on the download link">
+
+Save the folder in the desired location on the device.
+<img src="resources/pictures/tutopc1.PNG" alt="Save the folder">
+
+Unzip the folder
+<img src="resources/pictures/tutopc1.PNG" alt="Unzip the folder">
+
+Launch index.html
+<img src="resources/pictures/tutopc1.PNG" alt="Launch index.html">
+
 ### Mobile devices
