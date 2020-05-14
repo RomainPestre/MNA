@@ -13,9 +13,9 @@
 
 ## Installation
 ### General installation
-Click on the download link
-Save the folder in the desired location on the device.
-Unzip the folder
-All you have to do is launch the DEM by opening "index.html".
+1. Click on the download link
+2. Save the folder in the desired location on the device.
+3. Unzip the folder
+4. All you have to do is launch the DEM by opening "index.html".
 ### Computer
 ### Mobile devices
