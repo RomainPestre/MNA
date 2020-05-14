@@ -10,3 +10,12 @@
 4. Submit your information
 5. Fill in the form
 6. Calculate your malnutrition indicator score
+
+## Installation
+### General installation
+Click on the download link
+Save the folder in the desired location on the device.
+Unzip the folder
+All you have to do is launch the DEM by opening "index.html".
+### Computer
+### Mobile devices
