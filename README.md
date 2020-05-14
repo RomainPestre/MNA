@@ -29,12 +29,12 @@ Click on the download link
 <img src="resources/pictures/tutopc1.PNG" alt="Click on the download link">
 
 Save the folder in the desired location on the device.
-<img src="resources/pictures/tutopc1.PNG" alt="Save the folder">
+<img src="resources/pictures/tutopc2.PNG" alt="Save the folder">
 
 Unzip the folder
-<img src="resources/pictures/tutopc1.PNG" alt="Unzip the folder">
+<img src="resources/pictures/tutopc3.PNG" alt="Unzip the folder">
 
 Launch index.html
-<img src="resources/pictures/tutopc1.PNG" alt="Launch index.html">
+<img src="resources/pictures/tutopc4.PNG" alt="Launch index.html">
 
 ### Mobile devices
