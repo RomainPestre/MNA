@@ -4,8 +4,7 @@
 - [Use](#use)
 - [Installation](#installation)
   * [General installation](#general-installation)
-  * [Computer](#computer)
-  * [Mobile devices](#mobile-devices)
+  * [Detailed installation](#detailed-installation)
 ## Links
 <i>Website test link : https://romainpestre-mna.glitch.me</i>
 
@@ -24,7 +23,7 @@
 2. Save the folder in the desired location on the device.
 3. Unzip the folder
 4. All you have to do is launch the MNA by opening "index.html".
-### Computer
+### Detailed installation
 Click on the download link
 <img src="resources/pictures/tutopc1.PNG" alt="Click on the download link">
 
@@ -36,5 +35,3 @@ Unzip the folder
 
 Launch index.html
 <img src="resources/pictures/tutopc4.PNG" alt="Launch index.html">
-
-### Mobile devices
